@@ -1,7 +1,7 @@
 version: "2"
 services:
    namenode:
-      image: asami76/hadoop3
+      image: asami76/hadoop3  # or use 'image: hadoop3' in case you built the images locally
       hostname: namenode
       command: ["hdfs", "namenode"]
       ports:
@@ -11,12 +11,12 @@ services:
       environment:
           ENSURE_NAMENODE_DIR: "/tmp/hadoop-root/dfs/name"
    datanode:
-      image: asami76/hadoop3
+      image: asami76/hadoop3  # or use 'image: hadoop3' in case you built the images locally
       command: ["hdfs", "datanode"]
       env_file:
         - ./config      
    resourcemanager:
-      image: asami76/hadoop3
+      image: asami76/hadoop3  # or use 'image: hadoop3' in case you built the images locally
       hostname: resourcemanager
       command: ["yarn", "resourcemanager"]
       ports:
