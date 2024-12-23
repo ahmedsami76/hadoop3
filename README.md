@@ -34,3 +34,16 @@ Make sure you have the following installed
 * `$ hdfs dfs -mkdir /testdir`
 * `$ hdfs dfs -copyFromLocal /etc/hosts /testdir/hosts`
 * From the browser refresh the page and make sure you can now see a dir called "testdir" and it has a "hosts" file inside it
+
+
+----
+```
+# Example (may vary depending on your distribution)
+wget https://archive.apache.org/dist/hadoop/common/hadoop-3.3.6/hadoop-3.3.6.tar.gz # Replace with desired version
+tar -xzf hadoop-3.3.6.tar.gz
+cd hadoop-3.3.6
+export HADOOP_HOME=$PWD
+export PATH=$PATH:$HADOOP_HOME/bin
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$HADOOP_HOME/lib/native
+sudo apt-get install -y default-jdk
+```
